@@ -2,6 +2,12 @@
 
 @section('main-content')
 <section class="comics-archive container">
+    @if (session('delete-comic'))
+        <div class="alert alert-success">
+            <i class="far fa-check-circle"></i>
+            {{ session('delete-comic') }} has been deleted successfully.
+        </div>
+    @endif
     <table class="table">
         <thead>
             <tr>
@@ -48,7 +54,8 @@
                         <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
                         @csrf
                         @method('DELETE')
-                            <input type="submit" class="btn btn-danger" value="Delete">
+                            <input type="submit" class="btn btn-danger" value="Delete"
+                            onclick="return confirm('Are you sure to delete this comic?')">
                         </form>
                     </td>
                 </tr>
