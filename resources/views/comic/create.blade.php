@@ -10,6 +10,9 @@
         <label for="description" class="mb-2">Description</label>
         <textarea class="form-control mb-3" id="description" name="description" cols="6"></textarea>
 
+        <label for="thumb" class="mb-2">Cover</label>
+        <input class="form-control mb-3" type="text" id="thumb" name="thumb">
+
         <label for="price" class="mb-2">Price</label>
         <input class="form-control mb-3" type="text" id="price" name="price" placeholder="00.00">
 

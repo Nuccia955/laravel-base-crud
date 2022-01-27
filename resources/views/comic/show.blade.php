@@ -26,6 +26,10 @@
         </span>
     </div>
 
+    <div class="cover mb-4">
+        <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
+    </div>
+
     <h2>Description</h2>
     <p>{!! $comic->description !!}</p>
 
